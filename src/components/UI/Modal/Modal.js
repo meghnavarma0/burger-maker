@@ -1,9 +1,15 @@
 import React from 'react';
-
+import Auxiliary from '../../../hoc/Auxiliary';
 import classes from './Modal.module.css';
+import Backdrop from '../Backdrop/Backdrop';
 
 const modal = props => {
-	return <div className={classes.Modal}>{props.children}</div>;
+	return (
+		<Auxiliary>
+			<Backdrop show={true} clicked={props.clicked} />
+			<div className={classes.Modal}>{props.children}</div>
+		</Auxiliary>
+	);
 };
 
 export default modal;
