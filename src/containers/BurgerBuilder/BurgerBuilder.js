@@ -26,7 +26,6 @@ class BurgerBuilder extends Component {
 
 	updatePurchaseState(totalPrice) {
 		this.setState({ purchasable: totalPrice > 20 });
-		console.log(this.state.purchasable);
 	}
 
 	addIngredientHandler = type => {
