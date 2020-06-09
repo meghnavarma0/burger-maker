@@ -1,5 +1,5 @@
 import React from 'react';
-import Auxiliary from '../../../hoc/Auxiliary';
+import Auxiliary from '../../../hoc/Auxiliary/Auxiliary';
 import Button from '../../UI/Button/Button';
 
 const orderSummary = props => {
@@ -11,6 +11,7 @@ const orderSummary = props => {
 			</p>
 		)
 	);
+
 	return (
 		<Auxiliary>
 			<h3>Your Order</h3>
