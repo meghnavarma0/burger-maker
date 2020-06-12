@@ -4,10 +4,14 @@ import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 
 const modal = props => {
+	let updatedClass = [classes.Modal, classes.Out];
+	if (props.show) {
+		updatedClass = [classes.Modal, classes.In];
+	}
 	return (
 		<Auxiliary>
-			<Backdrop show={true} clicked={props.clicked} />
-			<div className={classes.Modal}>{props.children}</div>
+			<Backdrop show={props.show} clicked={props.clicked} />
+			<div className={updatedClass.join(' ')}>{props.children}</div>
 		</Auxiliary>
 	);
 };
